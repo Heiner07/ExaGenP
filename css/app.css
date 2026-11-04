@@ -1,0 +1,262 @@
+html, body {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+#blazor-error-ui {
+    color-scheme: light;
+    background: rgba(30, 30, 45, 0.95);
+    color: #f5f5f7;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    box-sizing: border-box;
+    display: none;
+    left: 50%;
+    right: auto;
+    bottom: 1rem;
+    width: min(52rem, calc(100vw - 2rem));
+    transform: translateX(-50%);
+    padding: 0.85rem 4rem 0.85rem 1rem;
+    position: fixed;
+    z-index: 2000;
+}
+
+    #blazor-error-ui .reload {
+        color: #1EC8A5;
+        font-weight: 600;
+        margin-left: 0.5rem;
+        text-decoration: none;
+    }
+
+        #blazor-error-ui .reload:hover {
+            text-decoration: underline;
+        }
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 1rem;
+        top: 0.55rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        line-height: 1.65rem;
+        text-align: center;
+        border-radius: 999px;
+        color: #d7d7df;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+        #blazor-error-ui .dismiss:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+.blazor-error-boundary {
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIG92ZXJmbG93PSJoaWRkZW4iPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxyZWN0IHg9IjIzNSIgeT0iNTEiIHdpZHRoPSI1NiIgaGVpZ2h0PSI0OSIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMzUgLTUxKSI+PHBhdGggZD0iTTI2My41MDYgNTFDMjY0LjcxNyA1MSAyNjUuODEzIDUxLjQ4MzcgMjY2LjYwNiA1Mi4yNjU4TDI2Ny4wNTIgNTIuNzk4NyAyNjcuNTM5IDUzLjYyODMgMjkwLjE4NSA5Mi4xODMxIDI5MC41NDUgOTIuNzk1IDI5MC42NTYgOTIuOTk2QzI5MC44NzcgOTMuNTEzIDI5MSA5NC4wODE1IDI5MSA5NC42NzgyIDI5MSA5Ny4wNjUxIDI4OS4wMzggOTkgMjg2LjYxNyA5OUwyNDAuMzgzIDk5QzIzNy45NjMgOTkgMjM2IDk3LjA2NTEgMjM2IDk0LjY3ODIgMjM2IDk0LjM3OTkgMjM2LjAzMSA5NC4wODg2IDIzNi4wODkgOTMuODA3MkwyMzYuMzM4IDkzLjAxNjIgMjM2Ljg1OCA5Mi4xMzE0IDI1OS40NzMgNTMuNjI5NCAyNTkuOTYxIDUyLjc5ODUgMjYwLjQwNyA1Mi4yNjU4QzI2MS4yIDUxLjQ4MzcgMjYyLjI5NiA1MSAyNjMuNTA2IDUxWk0yNjMuNTg2IDY2LjAxODNDMjYwLjczNyA2Ni4wMTgzIDI1OS4zMTMgNjcuMTI0NSAyNTkuMzEzIDY5LjMzNyAyNTkuMzEzIDY5LjYxMDIgMjU5LjMzMiA2OS44NjA4IDI1OS4zNzEgNzAuMDg4N0wyNjEuNzk1IDg0LjAxNjEgMjY1LjM4IDg0LjAxNjEgMjY3LjgyMSA2OS43NDc1QzI2Ny44NiA2OS43MzA5IDI2Ny44NzkgNjkuNTg3NyAyNjcuODc5IDY5LjMxNzkgMjY3Ljg3OSA2Ny4xMTgyIDI2Ni40NDggNjYuMDE4MyAyNjMuNTg2IDY2LjAxODNaTTI2My41NzYgODYuMDU0N0MyNjEuMDQ5IDg2LjA1NDcgMjU5Ljc4NiA4Ny4zMDA1IDI1OS43ODYgODkuNzkyMSAyNTkuNzg2IDkyLjI4MzcgMjYxLjA0OSA5My41Mjk1IDI2My41NzYgOTMuNTI5NSAyNjYuMTE2IDkzLjUyOTUgMjY3LjM4NyA5Mi4yODM3IDI2Ny4zODcgODkuNzkyMSAyNjcuMzg3IDg3LjMwMDUgMjY2LjExNiA4Ni4wNTQ3IDI2My41NzYgODYuMDU0N1oiIGZpbGw9IiNGRkU1MDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvZz48L3N2Zz4=) no-repeat 1rem/1.8rem, #b32121;
+    padding: 1rem 1rem 1rem 3.7rem;
+    color: white;
+}
+
+    .blazor-error-boundary::after {
+        content: "An error has occurred."
+    }
+
+.loading-progress {
+    position: absolute;
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    inset: 20vh 0 auto 0;
+    margin: 0 auto 0 auto;
+}
+
+    .loading-progress circle {
+        fill: none;
+        stroke: #e0e0e0;
+        stroke-width: 0.6rem;
+        transform-origin: 50% 50%;
+        transform: rotate(-90deg);
+    }
+
+        .loading-progress circle:last-child {
+            stroke: #1EC8A5;
+            stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+            transition: stroke-dasharray 0.05s ease-in-out;
+        }
+
+.loading-progress-text {
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+}
+
+    .loading-progress-text:after {
+        content: var(--blazor-load-percentage-text, "Cargando");
+    }
+
+code {
+    color: #c02d76;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+/* Pantalla de creación/edición: encabezado, paneles y acciones fijos;
+   solo el editor central hace scroll (escritorio/tablet) */
+@media (min-width: 960px) {
+    .editor-prueba-contenedor {
+        height: calc(100vh - 96px);
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .editor-prueba-layout {
+        height: 100%;
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr) auto;
+    }
+
+    .editor-prueba-encabezado {
+        min-height: 0;
+    }
+
+    .editor-prueba-cuerpo {
+        height: 100%;
+        min-height: 0;
+        overflow: hidden;
+        margin-bottom: 0;
+    }
+
+    .editor-prueba-cuerpo > .mud-grid-item {
+        height: 100%;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .editor-prueba-panel-scroll,
+    .editor-prueba-panel-papel,
+    .editor-prueba-centro-papel {
+        flex: 1 1 0;
+        min-height: 0;
+        overflow-y: auto;
+    }
+
+    .editor-prueba-panel-scroll > .mud-paper {
+        min-height: 100%;
+    }
+
+    .editor-prueba-acciones {
+        flex: 0 0 auto;
+    }
+
+    .editor-prueba-contenedor > .estado-carga {
+        min-height: 100%;
+    }
+
+    /* Toma la altura real del área de contenido y elimina el scroll global */
+    @supports selector(:has(*)) {
+        .mud-main-content:has(.editor-prueba-contenedor) {
+            height: 100vh;
+            box-sizing: border-box;
+            overflow: hidden;
+            padding-bottom: 8px !important;
+        }
+
+        .editor-prueba-contenedor {
+            height: 100%;
+            overflow: hidden;
+        }
+    }
+}
+
+/* Barra de acciones compacta */
+.editor-prueba-acciones {
+    min-height: 0;
+    margin: 0;
+    padding: 2px 0 0 0;
+    line-height: 1;
+}
+
+.editor-prueba-acciones .mud-button-root {
+    min-height: 24px;
+    padding: 0 8px;
+}
+
+/* Estados de carga centrados */
+.estado-carga {
+    width: 100%;
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Textarea redimensionable dentro de MudTextField */
+.resizable-textarea textarea {
+    resize: vertical !important;
+    overflow: auto !important;
+    min-height: 150px;
+    max-height: 400px;
+}
+
+/* Textarea redimensionable más chico (definiciones, celdas de rúbrica) */
+.resizable-textarea-sm textarea {
+    resize: vertical !important;
+    overflow: auto !important;
+    min-height: 60px;
+    max-height: 200px;
+}
+
+/* Logo de ExaGen */
+.app-logo {
+    height: 40px;
+    width: auto;
+    display: block;
+    margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .app-logo {
+        height: 36px;
+    }
+}
+
+.logo-ajustes-panel {
+    background: #151521;
+    border: 1px solid #2A2833;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.logo-ajustes {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Diálogo bloqueante mientras se genera el Word */
+.dialogo-carga {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-width: 260px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+}

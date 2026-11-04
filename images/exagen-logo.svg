@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" role="img" aria-labelledby="exagen-logo-title exagen-logo-desc">
+  <title id="exagen-logo-title">ExaGen — Gestión de pruebas académicas</title>
+  <desc id="exagen-logo-desc">Documento verde de fondo, cuadro blanco con EG y lápiz, junto al nombre ExaGen.</desc>
+  <defs>
+    <linearGradient id="exagen-logo-doc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22D3AE"/>
+      <stop offset="1" stop-color="#0B8F76"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M 50 42 A 12 12 0 0 1 62 30 H 110 L 132 52 V 112 A 12 12 0 0 1 120 124 H 62 A 12 12 0 0 1 50 112 Z"
+        fill="#000000" opacity=".30" transform="translate(3 3)"/>
+  <path d="M 50 42 A 12 12 0 0 1 62 30 H 110 L 132 52 V 112 A 12 12 0 0 1 120 124 H 62 A 12 12 0 0 1 50 112 Z"
+        fill="url(#exagen-logo-doc)"/>
+  <path d="M 110 30 L 132 52 H 118 A 6 6 0 0 1 112 46 Z" fill="#C9F7EC"/>
+
+  <rect x="62" y="60" width="48" height="5" rx="2.5" fill="#D7FFF6" opacity=".8"/>
+  <rect x="62" y="74" width="36" height="5" rx="2.5" fill="#D7FFF6" opacity=".8"/>
+  <rect x="62" y="88" width="44" height="5" rx="2.5" fill="#D7FFF6" opacity=".8"/>
+
+  <rect x="31" y="75" width="58" height="58" rx="12" fill="#031F1A" opacity=".45"/>
+  <rect x="28" y="72" width="58" height="58" rx="12" fill="#FFFFFF"/>
+  <text x="57" y="109" text-anchor="middle" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="30"
+        font-weight="700" letter-spacing="-2" fill="#0B7F6A">EG</text>
+
+  <g transform="translate(100 64) scale(1.2)" fill="#FFFFFF" stroke="#0B7F6A" stroke-width="1.6"
+     stroke-linejoin="round">
+    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+  </g>
+
+  <text x="176" y="98" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="64" font-weight="700"
+        letter-spacing="-1.5" fill="#F5F5F7">Exa<tspan fill="#1EC8A5">Gen</tspan></text>
+  <text x="178" y="132" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="17" font-weight="500"
+        letter-spacing="0.4" fill="#92929F">Gestión de pruebas académicas</text>
+  <rect x="178" y="146" width="42" height="4" rx="2" fill="#1EC8A5"/>
+</svg>
