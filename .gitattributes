@@ -1,0 +1,5 @@
+# Los assets con hash de integridad deben conservar sus bytes originales.
+# Evita que git convierta CRLF a LF y rompa los hashes en GitHub Pages.
+_framework/**/*.js -text
+index.html -text
+ExaGen.styles.css -text

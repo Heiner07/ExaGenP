@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExaGen - Ruta no encontrada</title>
+    <style>
+        :root { color-scheme: dark; }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: #0f0f16;
+            color: #f5f5f7;
+            font-family: Roboto, "Segoe UI", Arial, sans-serif;
+        }
+        .tarjeta {
+            width: min(480px, 100%);
+            padding: 32px;
+            text-align: center;
+            background: #151521;
+            border: 1px solid #2a2833;
+            border-radius: 16px;
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+        }
+        .marca {
+            color: #1ec8a5;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        h1 { margin: 12px 0 8px; font-size: 1.75rem; }
+        p { margin: 0 0 24px; color: #b8b8c2; line-height: 1.5; }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background: #1ec8a5;
+            color: #062f28;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        a:hover { filter: brightness(1.08); }
+    </style>
+</head>
+<body>
+    <main class="tarjeta">
+        <div class="marca">ExaGen</div>
+        <h1>Ruta no encontrada</h1>
+        <p>La página que buscas no existe o fue movida.</p>
+        <a id="inicio" href="/ExaGenP/">Ir a Inicio</a>
+    </main>
+    <script>
+        // Si el sitio se sirve fuera de /ExaGenP/ (por ejemplo en desarrollo), vuelve a la raíz.
+        if (location.pathname !== '/ExaGenP' && !location.pathname.startsWith('/ExaGenP/')) {
+            document.getElementById('inicio').setAttribute('href', '/');
+        }
+    </script>
+</body>
+</html>
